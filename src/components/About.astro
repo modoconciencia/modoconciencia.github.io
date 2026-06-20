@@ -1,97 +1,101 @@
-<section class="relative z-10 px-6 pb-20">
+---
+import { Brain, Heart, Zap, Star } from "lucide-astro";
+---
+
+<section class="relative z-10 px-6 pt-16 pb-20 bg-[#050505]">
 
     <div class="max-w-7xl mx-auto">
 
-        <div class="grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden border border-white/5 bg-[#0d1016]/70 backdrop-blur-xl shadow-[0_0_80px_rgba(203,177,144,0.04)]">
+        <div class="grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden border border-white/5 bg-[#111111] shadow-[0_0_80px_rgba(201,162,74,0.05)]">
 
-            <!-- Left -->
+            <!-- Izquierda -->
             <div class="lg:col-span-2 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-white/5">
 
                 <div class="flex items-center gap-3 mb-5">
 
-                    <div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#cbb190]/10 flex items-center justify-center text-[#cbb190] text-xl md:text-2xl">
-                        ♟
+                    <div class="w-12 h-12 rounded-xl bg-[#C9A24A]/10 flex items-center justify-center">
+                        <Star class="w-6 h-6 text-[#C9A24A]" />
                     </div>
 
-                    <h2 class="text-lg md:text-2xl font-semibold tracking-tight text-[#cbb190]">
-                        Sobre mí
+                    <h2 class="text-xl md:text-2xl font-semibold text-[#C9A24A]">
+                        Sobre nosotros
                     </h2>
 
                 </div>
 
-                <p class="text-[#c9d2de]/78 leading-relaxed text-[13px] md:text-[14px] text-justify">
-                    Desarrollo proyectos digitales donde el diseño, la estructura y la experiencia trabajan siempre en coherencia. Me enfoco en crear sistemas modernos, sólidos y funcionales; cuidando cada detalle para transformar todas las ideas en proyectos reales.
+                <p class="text-white/70 leading-relaxed text-[14px] text-justify">
+                    Un espacio para comprender cómo funciona la realidad y la conciencia, donde el pensamiento marca la dirección, la emoción aporta la energía y la acción concreta la manifestación; porque al final, la realidad no responde a lo que dices, sino a la coherencia entre lo que piensas, lo que sientes y lo que haces.
                 </p>
 
             </div>
 
-            <!-- Right -->
+            <!-- Derecha -->
             <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
 
-                <!-- Desarrollo -->
-                <div class="px-6 md:px-8 py-8 md:py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
+                <!-- Pensamiento -->
+                <div class="px-6 py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
 
-                    <div class="text-[#cbb190] text-xl md:text-2xl mb-4">
-                        &lt;/&gt;
+                    <div class="flex justify-center mb-5">
+                        <Brain class="w-8 h-8 text-[#C9A24A]" />
                     </div>
 
-                    <h3 class="text-[#f5f7fa] text-[15px] md:text-[16px] font-semibold mb-2">
-                        Desarrollo
+                    <h3 class="text-white text-[16px] font-semibold mb-3">
+                        Pensamiento
                     </h3>
 
-                    <p class="text-[#6e7178] leading-relaxed text-[13px] md:text-[14px]">
-                        Sistemas digitales modernos y bien estructurados.
+                    <p class="text-[#6F6F6F] text-[14px] leading-relaxed">
+                        Comprender, observar y dar dirección a la experiencia.
                     </p>
 
                 </div>
 
-                <!-- Arquitectura -->
-                <div class="px-6 md:px-8 py-8 md:py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
+                <!-- Emoción -->
+                <div class="px-6 py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
 
-                    <div class="text-[#cbb190] text-xl md:text-2xl mb-4">
-                        ✎
+                    <div class="flex justify-center mb-5">
+                        <Heart class="w-8 h-8 text-[#C9A24A]" />
                     </div>
 
-                    <h3 class="text-[#f5f7fa] text-[15px] md:text-[16px] font-semibold mb-2">
-                        Arquitectura
+                    <h3 class="text-white text-[16px] font-semibold mb-3">
+                        Emoción
                     </h3>
 
-                    <p class="text-[#6e7178] leading-relaxed text-[13px] md:text-[14px]">
-                        Estructuras y sistemas funcionales.
+                    <p class="text-[#6F6F6F] text-[14px] leading-relaxed">
+                        La energía que impulsa y da significado a lo vivido.
                     </p>
 
                 </div>
 
-                <!-- Experiencia -->
-                <div class="px-6 md:px-8 py-8 md:py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
+                <!-- Acción -->
+                <div class="px-6 py-10 text-center border-b md:border-b-0 md:border-r border-white/5">
 
-                    <div class="text-[#cbb190] text-xl md:text-2xl mb-4">
-                        ✦
+                    <div class="flex justify-center mb-5">
+                        <Zap class="w-8 h-8 text-[#C9A24A]" />
                     </div>
 
-                    <h3 class="text-[#f5f7fa] text-[15px] md:text-[16px] font-semibold mb-2">
-                        Experiencia
+                    <h3 class="text-white text-[16px] font-semibold mb-3">
+                        Acción
                     </h3>
 
-                    <p class="text-[#6e7178] leading-relaxed text-[13px] md:text-[14px]">
-                        Interfaces y navegación actuales.
+                    <p class="text-[#6F6F6F] text-[14px] leading-relaxed">
+                        Transformar la comprensión en decisiones y resultados.
                     </p>
 
                 </div>
 
-                <!-- Evolución -->
-                <div class="px-6 md:px-8 py-8 md:py-10 text-center">
+                <!-- Coherencia -->
+                <div class="px-6 py-10 text-center">
 
-                    <div class="text-[#cbb190] text-xl md:text-2xl mb-4">
-                        ✺
+                    <div class="flex justify-center mb-5">
+                        <Star class="w-8 h-8 text-[#C9A24A]" />
                     </div>
 
-                    <h3 class="text-[#f5f7fa] text-[15px] md:text-[16px] font-semibold mb-2">
-                        Evolución
+                    <h3 class="text-white text-[16px] font-semibold mb-3">
+                        Coherencia
                     </h3>
 
-                    <p class="text-[#6e7178] leading-relaxed text-[13px] md:text-[14px]">
-                        Desarrollo y crecimiento en cada proyecto.
+                    <p class="text-[#6F6F6F] text-[14px] leading-relaxed">
+                        La unión entre lo que piensas, sientes y haces.
                     </p>
 
                 </div>
