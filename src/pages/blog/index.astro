@@ -1,0 +1,213 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout>
+
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-[#050505] px-6 py-20">
+
+        <!-- Background -->
+        <div class="absolute inset-0">
+
+            <img
+                src="/background-modoconciencia.jpg"
+                alt="Background"
+                class="w-full h-full object-cover"
+            />
+
+            <!-- Overlay oscuro -->
+            <div class="absolute inset-0 bg-[#050505]/75"></div>
+
+            <!-- Glow dorado -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,74,0.10),transparent_60%)]"></div>
+
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto">
+
+            <!-- Logo -->
+            <div class="flex justify-center mb-2 md:-mb-6">
+
+                <img
+                    src="/logo-cabecera.png"
+                    alt="Logo Modo Conciencia"
+                    class="w-44 md:w-72 lg:w-96 object-contain drop-shadow-[0_0_30px_rgba(241,200,91,0.30)]"
+                />
+
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-6 md:mb-8">
+
+                <span class="text-[#FFFFFF]">
+                    Modo
+                </span>
+
+                <span class="text-[#C9A24A]">
+                    Conciencia
+                </span>
+
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl md:text-2xl text-white/70 leading-relaxed max-w-3xl mx-auto mb-10 md:mb-12 px-2">
+                Bienvenido al blog de Modo Conciencia, un espacio para cuestionar la realidad, comprender y despertar.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5">
+
+                <a
+                    href="/"
+                    class="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white font-semibold text-base md:text-lg transition-all duration-300 hover:bg-white/10 hover:border-[#C9A24A]/40 hover:scale-105"
+                >
+                    Volver atrás
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@modoconcienciaoficial"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-2xl bg-[#C9A24A] text-[#050505] font-semibold text-base md:text-lg transition-all duration-300 hover:scale-105 hover:bg-[#F1C85B]"
+                >
+                    Canal YouTube
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="relative z-10 px-6 pt-8 pb-32 md:pt-10 md:pb-40 bg-[#050505]">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
+
+                <!-- ESPIRITUALIDAD -->
+                <article class="group rounded-3xl overflow-hidden border border-white/5 bg-[#111111]/70 backdrop-blur-xl transition-all duration-300 hover:border-[#C9A24A]/25 hover:-translate-y-1">
+
+                    <a href="/blog/espiritualidad" class="block">
+
+                        <div class="relative h-56 overflow-hidden">
+
+                            <img
+                                src="/blog/espiritualidad.jpg"
+                                alt="Espiritualidad"
+                                class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                            />
+
+                            <div class="absolute inset-0 bg-black/10"></div>
+
+                        </div>
+
+                        <div class="p-6 md:p-7">
+
+                            <h2 class="text-[#f5f7fa] text-xl font-semibold mb-3">
+                                ESPIRITUALIDAD
+                            </h2>
+
+                            <p class="text-[#6e7178] text-sm leading-relaxed mb-6">
+                                Tradiciones, conocimiento y búsqueda interior.
+                            </p>
+
+                            <span class="inline-flex items-center text-[#C9A24A] text-sm font-medium transition-all duration-300 group-hover:text-[#F1C85B]">
+                                Explorar →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <!-- SIMBOLISMO -->
+                <article class="group rounded-3xl overflow-hidden border border-white/5 bg-[#111111]/70 backdrop-blur-xl transition-all duration-300 hover:border-[#C9A24A]/25 hover:-translate-y-1">
+
+                    <a href="/blog/simbolismo" class="block">
+
+                        <div class="relative h-56 overflow-hidden">
+
+                            <img
+                                src="/blog/simbolismo.jpg"
+                                alt="Simbolismo"
+                                class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                            />
+
+                            <div class="absolute inset-0 bg-black/10"></div>
+
+                        </div>
+
+                        <div class="p-6 md:p-7">
+
+                            <h2 class="text-[#f5f7fa] text-xl font-semibold mb-3">
+                                SIMBOLISMO
+                            </h2>
+
+                            <p class="text-[#6e7178] text-sm leading-relaxed mb-6">
+                                Números, arquetipos y significado profundo.
+                            </p>
+
+                            <span class="inline-flex items-center text-[#C9A24A] text-sm font-medium transition-all duration-300 group-hover:text-[#F1C85B]">
+                                Explorar →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+                <!-- CONCIENCIA -->
+                <article class="group rounded-3xl overflow-hidden border border-white/5 bg-[#111111]/70 backdrop-blur-xl transition-all duration-300 hover:border-[#C9A24A]/25 hover:-translate-y-1">
+
+                    <a href="/blog/conciencia" class="block">
+
+                        <div class="relative h-56 overflow-hidden">
+
+                            <img
+                                src="/blog/conciencia.jpg"
+                                alt="Conciencia"
+                                class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                            />
+
+                            <div class="absolute inset-0 bg-black/10"></div>
+
+                        </div>
+
+                        <div class="p-6 md:p-7">
+
+                            <h2 class="text-[#f5f7fa] text-xl font-semibold mb-3">
+                                CONCIENCIA
+                            </h2>
+
+                            <p class="text-[#6e7178] text-sm leading-relaxed mb-6">
+                                Pensamiento, observación y desarrollo interior.
+                            </p>
+
+                            <span class="inline-flex items-center text-[#C9A24A] text-sm font-medium transition-all duration-300 group-hover:text-[#F1C85B]">
+                                Explorar →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="h-12 md:h-20 bg-[#050505]"></div>
+
+    <Footer />
+
+</Layout>
