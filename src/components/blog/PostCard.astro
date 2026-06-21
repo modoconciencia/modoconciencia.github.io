@@ -1,0 +1,22 @@
+---
+const { href, title, description } = Astro.props;
+---
+
+<a
+    href={href}
+    class="group block rounded-3xl border border-white/5 bg-[#111111]/70 backdrop-blur-xl p-6 md:p-8 transition-all duration-300 hover:border-[#C9A24A]/25 hover:-translate-y-1"
+>
+
+    <h3 class="text-[#f5f7fa] text-lg md:text-xl font-semibold mb-3 leading-snug">
+        {title}
+    </h3>
+
+    <p class="text-[#6e7178] text-sm md:text-base leading-relaxed mb-6">
+        {description}
+    </p>
+
+    <span class="inline-flex items-center text-[#C9A24A] text-sm font-medium transition-all duration-300 group-hover:text-[#F1C85B]">
+        Leer artículo →
+    </span>
+
+</a>

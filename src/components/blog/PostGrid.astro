@@ -1,0 +1,67 @@
+---
+import PostCard from './PostCard.astro';
+---
+
+<section class="relative z-10 px-6 pt-16 pb-24 md:pb-32 bg-[#050505]">
+
+    <div class="max-w-5xl mx-auto">
+
+        <!-- Title -->
+        <div class="flex items-center justify-center gap-3 md:gap-4 mb-12">
+
+            <div class="w-8 md:w-12 h-px bg-[#C9A24A]/40"></div>
+
+            <h2 class="text-[#C9A24A] text-xl md:text-2xl font-semibold tracking-tight text-center">
+                Artículos
+            </h2>
+
+            <div class="w-8 md:w-12 h-px bg-[#C9A24A]/40"></div>
+
+        </div>
+
+        <!-- Posts -->
+        <div class="space-y-6">
+
+            <PostCard
+                href="/blog/espiritualidad/articulo-1"
+                title="ESPIRITUALIDAD | ¿Qué es la conciencia?"
+                description="Una introducción clara para comprender la conciencia, la presencia y el despertar interior."
+            />
+
+            <PostCard
+                href="/blog/espiritualidad/articulo-2"
+                title="ESPIRITUALIDAD | El despertar interior"
+                description="El inicio del camino interno cuando la persona empieza a observarse con mayor profundidad."
+            />
+
+            <PostCard
+                href="/blog/espiritualidad/articulo-3"
+                title="ESPIRITUALIDAD | La noche oscura del alma"
+                description="Una etapa de ruptura, silencio y transformación dentro del proceso de conciencia."
+            />
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex items-center justify-center gap-6 mt-14">
+
+            <span class="px-7 py-3 rounded-2xl border border-white/5 bg-white/[0.03] text-white/30 text-sm font-medium cursor-not-allowed">
+                Anterior
+            </span>
+
+            <span class="text-[#C9A24A] text-lg font-semibold">
+                1
+            </span>
+
+            <a
+                href="#"
+                class="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white text-sm font-medium transition-all duration-300 hover:bg-white/10 hover:border-[#C9A24A]/40 hover:text-[#C9A24A] hover:scale-105"
+            >
+                Siguiente
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
