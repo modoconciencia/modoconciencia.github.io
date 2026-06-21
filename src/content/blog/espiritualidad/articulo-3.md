@@ -1,6 +1,6 @@
 ---
 
-title: "El despertar interior"
+title: "#3 El despertar interior"
 description: "El comienzo del camino de autoconocimiento y observación consciente."
 date: "2026-06-21"
 ------------------

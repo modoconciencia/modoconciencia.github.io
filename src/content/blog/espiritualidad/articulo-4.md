@@ -1,6 +1,6 @@
 ---
 
-title: "La observación"
+title: "#4 La observación"
 description: "La importancia de observar pensamientos, emociones y acciones para comprender mejor la experiencia humana."
 date: "2026-06-21"
 ------------------

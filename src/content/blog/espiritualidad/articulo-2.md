@@ -1,6 +1,6 @@
 ---
 
-title: "¿Qué es la conciencia?"
+title: "#1 ¿Qué es la conciencia?"
 description: "Una introducción para comprender el concepto de conciencia y su importancia en la experiencia humana."
 date: "2026-06-21"
 ------------------
