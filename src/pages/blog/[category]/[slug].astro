@@ -1,0 +1,157 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Footer from '../../../components/Footer.astro';
+
+export function getStaticPaths() {
+    const allPosts = import.meta.glob('../../../content/blog/**/*.md', { eager: true });
+
+    function getCategoryFromPath(path) {
+        return path.match(/content\/blog\/([^/]+)\//)?.[1];
+    }
+
+    function getSlugFromPath(path) {
+        return path.split('/').pop().replace('.md', '');
+    }
+
+    return Object.entries(allPosts).map(([path, post]) => {
+        const category = getCategoryFromPath(path);
+        const slug = post.frontmatter?.slug || getSlugFromPath(path);
+
+        return {
+            params: { category, slug },
+            props: { post, category },
+        };
+    });
+}
+
+const { post, category } = Astro.props;
+const { Content, frontmatter } = post;
+---
+
+<Layout>
+
+<section class="relative z-10 px-6 pt-20 pb-32 bg-[#050505] overflow-hidden">
+
+    <!-- Background igual que el Hero -->
+    <div class="absolute inset-0">
+
+        <img
+            src="/background-modoconciencia.jpg"
+            alt="Background"
+            class="w-full h-full object-cover"
+        />
+
+        <div class="absolute inset-0 bg-[#050505]/75"></div>
+
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,162,74,0.10),transparent_60%)]"></div>
+
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+
+        <a
+            href={`/blog/${category}`}
+            class="inline-flex px-8 py-4 rounded-2xl border border-[#C9A24A]/25 bg-white/5 backdrop-blur-md text-white/80 font-semibold transition-all duration-300 hover:bg-[#C9A24A]/10 hover:border-[#C9A24A]/45 hover:text-white hover:scale-105 mb-16"
+        >
+            Volver atrás
+        </a>
+
+        <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-[#C9A24A]">
+            {frontmatter.title}
+        </h1>
+
+        <p class="text-white/60 text-xl leading-relaxed mb-14">
+            {frontmatter.description}
+        </p>
+
+        <div class="rounded-[32px] border border-white/5 bg-[#0d1016]/70 backdrop-blur-xl p-8 md:p-12">
+
+            <article class="article-content">
+
+                <Content />
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<Footer />
+
+</Layout>
+
+<style>
+
+    .article-content {
+        color: rgba(255,255,255,.72);
+        font-size: 17px;
+        line-height: 2.1;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .article-content :global(p) {
+        margin-bottom: 2rem;
+        text-align: justify;
+    }
+
+    .article-content :global(p:last-child) {
+        margin-bottom: 0;
+    }
+
+    .article-content :global(h1) {
+        color: rgba(255,255,255,.85);
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+
+    .article-content :global(h2) {
+        color: #C9A24A;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    .article-content :global(h3) {
+        color: rgba(255,255,255,.9);
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .article-content :global(strong) {
+        color: rgba(255,255,255,.92);
+        font-weight: 600;
+    }
+
+    .article-content :global(ul),
+    .article-content :global(ol) {
+        margin-bottom: 2rem;
+        padding-left: 1.5rem;
+    }
+
+    .article-content :global(li) {
+        margin-bottom: .8rem;
+        color: rgba(255,255,255,.72);
+    }
+
+    .article-content :global(blockquote) {
+        border-left: 3px solid rgba(201,162,74,.5);
+        padding-left: 1.5rem;
+        color: rgba(255,255,255,.6);
+        font-style: italic;
+        margin: 3rem 0;
+    }
+
+    .article-content :global(hr) {
+        display: none;
+    }
+
+</style>

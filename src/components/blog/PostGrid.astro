@@ -1,5 +1,15 @@
 ---
 import PostCard from './PostCard.astro';
+
+const {
+    category,
+    posts = [],
+    currentPage = 1,
+    hasPreviousPage = false,
+    hasNextPage = false,
+    previousUrl = '#',
+    nextUrl = '#'
+} = Astro.props;
 ---
 
 <section class="relative z-10 px-6 pt-16 pb-24 md:pb-32 bg-[#050505]">
@@ -22,43 +32,57 @@ import PostCard from './PostCard.astro';
         <!-- Posts -->
         <div class="space-y-6">
 
-            <PostCard
-                href="/blog/espiritualidad/articulo-1"
-                title="ESPIRITUALIDAD | ¿Qué es la conciencia?"
-                description="Una introducción clara para comprender la conciencia, la presencia y el despertar interior."
-            />
-
-            <PostCard
-                href="/blog/espiritualidad/articulo-2"
-                title="ESPIRITUALIDAD | El despertar interior"
-                description="El inicio del camino interno cuando la persona empieza a observarse con mayor profundidad."
-            />
-
-            <PostCard
-                href="/blog/espiritualidad/articulo-3"
-                title="ESPIRITUALIDAD | La noche oscura del alma"
-                description="Una etapa de ruptura, silencio y transformación dentro del proceso de conciencia."
-            />
+            {posts.map((post) => (
+                <PostCard
+                    href={post.href}
+                    category={category}
+                    title={post.title}
+                    description={post.description}
+                />
+            ))}
 
         </div>
 
         <!-- Pagination -->
         <div class="flex items-center justify-center gap-6 mt-14">
 
-            <span class="px-7 py-3 rounded-2xl border border-white/5 bg-white/[0.03] text-white/30 text-sm font-medium cursor-not-allowed">
-                Anterior
+            {hasPreviousPage ? (
+
+                <a
+                    href={previousUrl}
+                    class="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white text-sm font-medium transition-all duration-300 hover:bg-white/10 hover:border-[#C9A24A]/40 hover:text-[#C9A24A] hover:scale-105"
+                >
+                    Anterior
+                </a>
+
+            ) : (
+
+                <span class="px-7 py-3 rounded-2xl border border-white/5 bg-white/[0.03] text-white/30 text-sm font-medium pointer-events-none select-none">
+                    Anterior
+                </span>
+
+            )}
+
+            <span class="text-white/90 text-lg font-semibold">
+                {currentPage}
             </span>
 
-            <span class="text-[#C9A24A] text-lg font-semibold">
-                1
-            </span>
+            {hasNextPage ? (
 
-            <a
-                href="#"
-                class="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white text-sm font-medium transition-all duration-300 hover:bg-white/10 hover:border-[#C9A24A]/40 hover:text-[#C9A24A] hover:scale-105"
-            >
-                Siguiente
-            </a>
+                <a
+                    href={nextUrl}
+                    class="px-7 py-3 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md text-white text-sm font-medium transition-all duration-300 hover:bg-white/10 hover:border-[#C9A24A]/40 hover:text-[#C9A24A] hover:scale-105"
+                >
+                    Siguiente
+                </a>
+
+            ) : (
+
+                <span class="px-7 py-3 rounded-2xl border border-white/5 bg-white/[0.03] text-white/30 text-sm font-medium pointer-events-none select-none">
+                    Siguiente
+                </span>
+
+            )}
 
         </div>
 
