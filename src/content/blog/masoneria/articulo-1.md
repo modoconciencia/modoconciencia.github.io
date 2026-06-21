@@ -1,6 +1,6 @@
 ---
 
-title: "#0 ¿Qué encontrarás aquí?"
+title: "#1 ¿Qué encontrarás aquí?"
 description: "Una introducción al contenido y la visión del apartado de Masonería."
 date: "2026-06-21"
 ------------------
