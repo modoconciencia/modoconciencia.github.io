@@ -49,11 +49,30 @@ const { Content, frontmatter } = post;
 
     <div class="relative z-10 max-w-4xl mx-auto">
 
+        <!-- Botón volver -->
         <a
             href={`/blog/${category}`}
-            class="inline-flex px-8 py-4 rounded-2xl border border-[#C9A24A]/25 bg-white/5 backdrop-blur-md text-white/80 font-semibold transition-all duration-300 hover:bg-[#C9A24A]/10 hover:border-[#C9A24A]/45 hover:text-white hover:scale-105 mb-16"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white/70 transition-all duration-300 hover:bg-[#C9A24A]/10 hover:border-[#C9A24A]/40 hover:text-white hover:scale-105 mb-16"
+            aria-label="Volver"
         >
-            Volver atrás
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+                class="w-8 h-8"
+            >
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                />
+
+            </svg>
+
         </a>
 
         <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 text-[#C9A24A]">
@@ -152,6 +171,58 @@ const { Content, frontmatter } = post;
 
     .article-content :global(hr) {
         display: none;
+    }
+
+    @media (max-width: 768px) {
+
+        .article-content {
+            font-size: 15.5px;
+            line-height: 1.9;
+        }
+
+        .article-content :global(p) {
+            margin-bottom: 1.6rem;
+            text-align: left;
+        }
+
+        .article-content :global(h1) {
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .article-content :global(h2) {
+            font-size: 1.35rem;
+            margin-top: 3rem;
+            margin-bottom: 1.4rem;
+        }
+
+        .article-content :global(h3) {
+            font-size: 1.15rem;
+            margin-top: 2.4rem;
+        }
+
+        .article-content :global(blockquote) {
+            margin: 2.4rem 0;
+            padding-left: 1rem;
+        }
+
+        .article-content :global(iframe) {
+            border-radius: 18px !important;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+
+        .article-content {
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .article-content :global(p) {
+            margin-bottom: 1.4rem;
+        }
+
     }
 
 </style>
